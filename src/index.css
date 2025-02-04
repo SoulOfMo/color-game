@@ -1,4 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --font1: "IBM Plex Mono", serif;
+  --font2: "Plus Jakarta Sans", serif;
+  /* --bg-color: #0A2E36; */
+  /* --bg-color: #1E1E2E;
+  --netural1: #9D4EDD;
+  --netural2: #F8F9FA; */
+
+  --bg-color: #F8F9FA;
+  --netural1: #4A90E2;
+  --netural2: #2D2D2D;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
 body {
+  height: 100%;
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: var(--font2)
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Main Styling */
+#root {
+  height: 100%;
+  background-color: var(--bg-color);
+  place-content: center;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  margin: auto;
+}
+
+h1 {
+  font-weight: 700;
+  font-family: var(--font1);
+  color: var(--netural2);
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+
+.color-box {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.score {
+  color: var(--netural2);
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.message {
+  color: var(--netural2);
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.color-options-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 20px;
+  justify-items: center;
+}
+
+.color-option {
+  width: 75px;
+  height: 75px;
+  border-radius: 5px;
+  border: 2px solid var(--netural2);
+}
+
+.reset-btn {
+  background-color: var(--netural1);
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--netural2);
+  font-weight: 700;
+}
+
+.reset-btn:hover {
+  background-color: #7A34C1;
+}
+
+.wrong {
+  animation: bounce 1s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(10px)
+  }
+
+  50% {
+    transform: translateX(-10px)
+  }
+
+  100% {
+    transform: stranslateX(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +164,110 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/* 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: sans-serif;
+  margin: 48px 96px;
+  position: relative;
+  color: #444;
+}
+
+button {
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle {
+  position: absolute;
+  right: 0;
+  background: none;
+  font-size: 30px;
+  padding: 4px;
+}
+
+.tabs {
+  margin-bottom: 8px;
+}
+
+.tab {
+  border-radius: 12px;
+  background-color: #edf2ff;
+  padding: 12px 24px;
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #364fc7;
+  transition: all 0.3s;
+}
+
+.tab.active,
+.tab:hover {
+  background-color: #364fc7;
+  color: #fff;
+}
+
+.tab-content {
+  background-color: #edf2ff;
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.tab-content h4 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #364fc7;
+}
+
+.tab-content p {
+  font-size: 18px;
+}
+
+.tab-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.tab-actions>button {
+  background: none;
+  text-decoration: underline;
+  color: #4c6ef5;
+  font-size: 14px;
+}
+
+.hearts-counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hearts-counter button {
+  background-color: #f03e3e;
+  padding: 4px 6px;
+  border-radius: 4px;
+  color: #fff;
+  line-height: 1;
+}
+
+.tab-undo {
+  display: flex;
+  gap: 8px;
+}
+
+.tab-undo button {
+  background-color: #364fc7;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+} */
