@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/color-game/static/css/main.566b3f23.css",
+    "main.js": "/color-game/static/js/main.344e0760.js",
+    "index.html": "/color-game/index.html",
+    "main.566b3f23.css.map": "/color-game/static/css/main.566b3f23.css.map",
+    "main.344e0760.js.map": "/color-game/static/js/main.344e0760.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.566b3f23.css",
+    "static/js/main.344e0760.js"
+  ]
+}
