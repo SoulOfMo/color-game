@@ -3,14 +3,19 @@
 :root {
   --font1: "IBM Plex Mono", serif;
   --font2: "Plus Jakarta Sans", serif;
-  /* --bg-color: #0A2E36; */
-  /* --bg-color: #1E1E2E;
+  --bg-color: #1E1E2E;
   --netural1: #9D4EDD;
-  --netural2: #F8F9FA; */
+  --netural2: #F8F9FA;
+  --netural3: #7A34C1;
+}
 
+.bg-light {
+  /* --bg-color: #0A2E36; */
   --bg-color: #F8F9FA;
   --netural1: #4A90E2;
   --netural2: #2D2D2D;
+  --netural3: #3B7AC9;
+
 }
 
 /* reset */
@@ -48,9 +53,10 @@ button {
 }
 
 /* Main Styling */
+
 #root {
   height: 100%;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   place-content: center;
 }
 
@@ -58,6 +64,16 @@ main {
   display: grid;
   place-content: center;
   margin: auto;
+  height: 100%;
+  background-color: var(--bg-color);
+  transition: all 1s;
+}
+
+.header {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 h1 {
@@ -65,7 +81,7 @@ h1 {
   font-family: var(--font1);
   color: var(--netural2);
   text-align: center;
-  margin-bottom: 15px;
+
   font-size: 2rem;
   text-transform: capitalize;
 }
@@ -94,7 +110,7 @@ h1 {
 .color-options-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  row-gap: 1rem;
   margin-top: 20px;
   justify-items: center;
 }
@@ -116,7 +132,7 @@ h1 {
 }
 
 .reset-btn:hover {
-  background-color: #7A34C1;
+  background-color: var(--netural3);
 }
 
 .wrong {
