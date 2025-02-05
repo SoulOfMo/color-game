@@ -67,6 +67,7 @@ function App() {
     setDarkTheme((curTheme) => (curTheme === "dark" ? "" : "dark"));
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     handleReset();
   }, []);
